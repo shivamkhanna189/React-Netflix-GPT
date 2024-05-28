@@ -10,7 +10,7 @@ const Body = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 // sign in or signup
                 const {uid , email , displayName} = user
@@ -22,6 +22,9 @@ const Body = () => {
                 navigate("/");
             }
         })
+
+        // unsubscribing auth state change
+        return () => unsubscribe();
     },[]) 
 
 
