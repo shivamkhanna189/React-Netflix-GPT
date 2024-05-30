@@ -23,7 +23,7 @@ const Header = () => {
       {
         userInfo && 
         <div>
-        <button  className="font-bold text-white"onClick={() => {
+        <button  className="font-bold text-white cursor-pointer"onClick={() => {
           signOutUser()
         }}> Sign Out</button>
       </div>
