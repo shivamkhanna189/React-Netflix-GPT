@@ -8,8 +8,17 @@ export const MOVIE_API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4Nzk2NTZmZDRhYWJlNDczZTc3OTdiNDBlNTcxYjkxYSIsInN1YiI6IjY2NTA1MDk2MWRhNGZkODBjYzliNDNlYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VMXBcEzHqEdmHH3SMQ3LkGgy9fUryjHXyGaNsICNlvk'
+    Authorization: 'Bearer '+process.env.REACT_APP_TMDB_KEY
   }
 };
 
-export const TMDB_IMG_CDN_URL ="https://image.tmdb.org/t/p/w200"
+export const TMDB_IMG_CDN_URL = "https://image.tmdb.org/t/p/w200";
+
+export const SUPPORTED_LANGUAGES = [
+  { label: "English", value: "en" },
+  { label :"Hindi" , value :"hindi"}
+]
+
+export const OPENAI_API_KEY = process.env.REACT_APP_OPEN_API_KEY
+
+export const SEARCH_MOVIE ="https://api.themoviedb.org/3/search/movie"
